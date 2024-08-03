@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:focus-visible {
+    outline: 1px dashed black;
+    border-radius: 20px;
+}
+
+body, html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+summary {
+    user-select: none;
+    touch-action: none;
+    cursor: pointer;
+}
+
+
+@supports selector(::-webkit-scrollbar) {
+    .custom-scrollbar {
+        scrollbar-gutter: stable;
+    }    
+    .custom-scrollbar::-webkit-scrollbar {
+      background: white;
+      width: 7px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgb(210, 210, 210);
+      border-radius: 100px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgb(198, 198, 198);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:active {
+        background: rgb(164, 163, 163);
+    }
+}
+
+
+/**
+* details tag
+**/
+summary  {
+    list-style: none;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url('../../public/img/downArrow.png');
+  background-size: cover;
+  transition: 0.2s;
+  margin-right: 5px;
+}
+
+details[open] > summary::before {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+/*** test ***/
+
