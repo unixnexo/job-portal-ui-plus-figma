@@ -554,6 +554,22 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -621,12 +637,8 @@ video {
   height: 100vh;
 }
 
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[220px\] {
-  width: 220px;
+.w-\[210px\] {
+  width: 210px;
 }
 
 .w-min {
@@ -678,6 +690,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -800,6 +818,10 @@ video {
   outline-offset: 2px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 *:focus-visible {
   outline: 1px dashed black;
   border-radius: 20px;
@@ -823,21 +845,27 @@ summary {
   }
 
   .custom-scrollbar::-webkit-scrollbar {
-    background: white;
-    width: 7px;
+    background: transparent;
+    width: 10px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: rgb(210, 210, 210);
     border-radius: 100px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgb(198, 198, 198);
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:active {
     background: rgb(164, 163, 163);
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
   }
 }
 
@@ -866,6 +894,18 @@ summary::before {
 details[open] > summary::before {
   transform: rotate(180deg);
 }
+
+/* .details-wrapper::before {
+    content: '';
+    right: 0px;
+    top: 5px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url('../../public/img/x.png');
+    background-size: cover;
+    cursor: pointer;
+} */
 
 /*** test ***/
 
@@ -944,4 +984,3 @@ details[open] > summary::before {
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
 }
-

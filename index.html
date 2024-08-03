@@ -11,7 +11,7 @@
     <div class="flex">
 
         <!-- navigation nav -->
-        <nav class="w-[220px] flex flex-col bg-white h-screen overflow-hidden hover:overflow-y-auto shadow-lg custom-scrollbar">
+        <nav class="w-[210px] flex flex-col bg-white h-screen overflow-hidden hover:overflow-y-auto shadow-lg custom-scrollbar">
             <!-- logo -->
             <div class="w-min mx-auto mt-[19px] text-black">
                 <h1 class="font-bold text-3xl">Work<span class="text-main-sky-blue">By</span></h1>
@@ -100,42 +100,170 @@
         </main>
 
         <!-- filtering nav -->
-        <nav class="w-[200px] bg-main-sky-blue px-4">
-            <div class="flex justify-between items-center mt-[19px] mb-3">
+        <nav class="w-[210px] h-screen bg-main-sky-blue px-4 overflow-hidden hover:overflow-y-auto custom-scrollbar" dir="rtl">
+            <div class="flex justify-between items-center mt-[19px] mb-3" dir="ltr">
                 <p class="text-[18px] font-medium">Filters</p>
-                <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
-                    <path class="stroke-red-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                </svg>                  
+                <img src="./public/img/x.png" alt="clear all" />               
             </div>
             <!-- filters -->
-            <div>
+            <div class="space-y-4" dir="ltr">
 
-                <details open>
-                    <summary class="text-[18px] flex items-center">Job Title</summary>
-                    <!-- choices wrapper -->
-                    <form>
-                        <div class="flex items-center space-x-1">
-                            <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
-                            <label for="Doctor" class="select-none touch-none">Doctor</label>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Back-end Developer" id="Back-end Developer"/>
-                            <label for="Back-end Developer" class="select-none touch-none">Back-end Developer</label>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Front-end Developer" id="Front-end Developer"/>
-                            <label for="Front-end Developer" class="select-none touch-none">Front-end Developer</label>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Engineer" id="Engineer"/>
-                            <label for="Engineer" class="select-none touch-none">Engineer</label>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Designer" id="Designer"/>
-                            <label for="Designer" class="select-none touch-none">Designer</label>
-                        </div>
-                    </from>
-                </details>
+                <!-- job title filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Job Title</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
+                                <label for="Doctor" class="select-none touch-none">Doctor</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Back-end Developer" id="Back-end Developer"/>
+                                <label for="Back-end Developer" class="select-none touch-none">Back-end Developer</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Front-end Developer" id="Front-end Developer"/>
+                                <label for="Front-end Developer" class="select-none touch-none">Front-end Developer</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Engineer" id="Engineer"/>
+                                <label for="Engineer" class="select-none touch-none">Engineer</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Designer" id="Designer"/>
+                                <label for="Designer" class="select-none touch-none">Designer</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
+
+                <!-- experience filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Experience</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 7 years" id="Up to 7 years"/>
+                                <label for="Up to 7 years" class="select-none touch-none">Up to 7 years</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 5 years" id="Up to 5 years"/>
+                                <label for="Up to 5 years" class="select-none touch-none">Up to 5 years</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 3 years" id="Up to 3 years"/>
+                                <label for="Up to 3 years" class="select-none touch-none">Up to 3 years</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Less than 3 years" id="Less than 3 years"/>
+                                <label for="Less than 3 years" class="select-none touch-none">Less than 3 years</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="None" id="None"/>
+                                <label for="None" class="select-none touch-none">None</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
+
+                <!-- salary filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Salary</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 500K per year" id="Up to 500K per year"/>
+                                <label for="Up to 500K per year" class="select-none touch-none">Up to 500K per year</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 300K per year" id="Up to 300K per year"/>
+                                <label for="Up to 300K per year" class="select-none touch-none">Up to 300K per year</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up tp 100K per year" id="Up tp 100K per year"/>
+                                <label for="Up tp 100K per year" class="select-none touch-none">Up tp 100K per year</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 50K per year" id="Up to 50K per year"/>
+                                <label for="Up to 50K per year" class="select-none touch-none">Up to 50K per year</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
+
+                <!-- location filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Location</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Iran" id="Iran"/>
+                                <label for="Iran" class="select-none touch-none">Iran</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="USA" id="USA"/>
+                                <label for="USA" class="select-none touch-none">USA</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="UK" id="UK"/>
+                                <label for="UK" class="select-none touch-none">UK</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Italy" id="Italy"/>
+                                <label for="Italy" class="select-none touch-none">Italy</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Japan" id="Japan"/>
+                                <label for="Japan" class="select-none touch-none">Japan</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
+
+                <!-- gender filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Gender</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Male" id="Male"/>
+                                <label for="Male" class="select-none touch-none">Male</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Female" id="Female"/>
+                                <label for="Female" class="select-none touch-none">Female</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Kid" id="Kid"/>
+                                <label for="Kid" class="select-none touch-none">Kid</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Any" id="Any"/>
+                                <label for="Any" class="select-none touch-none">Any</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
 
             </div>
         </nav>
