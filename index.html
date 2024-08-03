@@ -100,17 +100,19 @@
         </main>
 
         <!-- filtering nav -->
-        <nav class="w-[210px] h-screen bg-main-sky-blue px-4 overflow-hidden hover:overflow-y-auto custom-scrollbar" dir="rtl">
+        <nav class="w-[210px] h-screen bg-main-sky-blue px-4 overflow-hidden hover:overflow-y-auto custom-scrollbar pb-5" dir="rtl">
             <div class="flex justify-between items-center mt-[19px] mb-3" dir="ltr">
                 <p class="text-[18px] font-medium">Filters</p>
-                <img src="./public/img/x.png" alt="clear all" />               
+                <svg class="stroke-red-500 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>               
             </div>
             <!-- filters -->
             <div class="space-y-4" dir="ltr">
 
                 <!-- job title filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <details open>
@@ -143,7 +145,7 @@
 
                 <!-- experience filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <details open>
@@ -176,7 +178,7 @@
 
                 <!-- salary filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <details open>
@@ -205,7 +207,7 @@
 
                 <!-- location filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <details open>
@@ -238,7 +240,7 @@
 
                 <!-- gender filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <details open>
@@ -264,6 +266,32 @@
                         </form>
                     </details>
                 </div>
+
+                <!-- conditions filter -->
+                <div class="details-wrapper flex relative">
+                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <details open>
+                        <summary class="text-[18px] flex items-center">Conditions</summary>
+                        <!-- choices wrapper -->
+                        <form>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Remote Only" id="Remote Only"/>
+                                <label for="Remote Only" class="select-none touch-none">Remote Only</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="in-person Only" id="in-person Only"/>
+                                <label for="in-person Only" class="select-none touch-none">in-person Only</label>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Hybrid" id="Hybrid"/>
+                                <label for="Hybrid" class="select-none touch-none">Hybrid</label>
+                            </div>
+                        </form>
+                    </details>
+                </div>
+
 
             </div>
         </nav>

@@ -69,19 +69,6 @@ details[open] > summary::before {
   transform: rotate(180deg);
 }
 
-/* .details-wrapper::before {
-    content: '';
-    right: 0px;
-    top: 5px;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: url('../../public/img/x.png');
-    background-size: cover;
-    cursor: pointer;
-} */
-
-
 
 
 

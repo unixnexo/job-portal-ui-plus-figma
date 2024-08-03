@@ -566,8 +566,8 @@ video {
   right: 0px;
 }
 
-.top-1 {
-  top: 0.25rem;
+.top-1\.5 {
+  top: 0.375rem;
 }
 
 .mx-1 {
@@ -751,6 +751,10 @@ video {
   padding-right: 1rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -894,18 +898,6 @@ summary::before {
 details[open] > summary::before {
   transform: rotate(180deg);
 }
-
-/* .details-wrapper::before {
-    content: '';
-    right: 0px;
-    top: 5px;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: url('../../public/img/x.png');
-    background-size: cover;
-    cursor: pointer;
-} */
 
 /*** test ***/
 
