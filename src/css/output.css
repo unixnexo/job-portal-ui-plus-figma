@@ -585,6 +585,11 @@ video {
   margin-right: auto;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -641,8 +646,16 @@ video {
   height: 100vh;
 }
 
+.max-h-\[120px\] {
+  max-height: 120px;
+}
+
 .w-\[210px\] {
   width: 210px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-min {
@@ -662,6 +675,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
 .touch-none {
   touch-action: none;
 }
@@ -678,6 +695,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-between {
@@ -706,6 +727,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -714,8 +739,16 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border-0 {
   border-width: 0px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .bg-main-sky-blue {
@@ -759,8 +792,17 @@ video {
   padding-right: 1rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .text-center {
@@ -782,6 +824,11 @@ video {
 
 .text-\[20px\] {
   font-size: 20px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -848,7 +895,7 @@ video {
   transition-timing-function: linear;
 }
 
-*:focus-visible {
+*:focus-visible:not(input) {
   outline: 1px dashed black;
   border-radius: 20px;
 }
@@ -863,6 +910,18 @@ summary {
           user-select: none;
   touch-action: none;
   cursor: pointer;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, and Opera */
 }
 
 @supports selector(::-webkit-scrollbar) {
@@ -893,6 +952,28 @@ summary {
     border: 3px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
   }
+
+  /* .custom-scrollbar-sm {
+        scrollbar-gutter: stable;
+    }     */
+
+  .custom-scrollbar-sm::-webkit-scrollbar {
+    background: transparent;
+    width: 4px;
+  }
+
+  .custom-scrollbar-sm::-webkit-scrollbar-thumb {
+    background: rgb(210, 210, 210);
+    border-radius: 100px;
+  }
+
+  .custom-scrollbar-sm::-webkit-scrollbar-thumb:hover {
+    background: rgb(198, 198, 198);
+  }
+
+  .custom-scrollbar-sm::-webkit-scrollbar-thumb:active {
+    background: rgb(164, 163, 163);
+  }
 }
 
 /**
@@ -919,6 +1000,27 @@ summary::before {
 
 details[open] > summary::before {
   transform: rotate(180deg);
+}
+
+/**
+* custom X icon on search inputs
+**/
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: .3;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 /*** test ***/
@@ -989,6 +1091,10 @@ details[open] > summary::before {
   background-color: rgb(89 160 214 / var(--tw-bg-opacity));
 }
 
+.focus\:outline-active-gray-ish:focus {
+  outline-color: #e8e8e8;
+}
+
 .active\:bg-main-sky-blue:active {
   --tw-bg-opacity: 1;
   background-color: rgb(90 169 230 / var(--tw-bg-opacity));
@@ -1007,4 +1113,8 @@ details[open] > summary::before {
 .active\:\[\&\>\*\:not\(\:first-child\)\]\:bg-active-gray-ish>*:not(:first-child):active {
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 232 / var(--tw-bg-opacity));
+}
+
+.\[\&\>div\>label\]\:leading-5>div>label {
+  line-height: 1.25rem;
 }

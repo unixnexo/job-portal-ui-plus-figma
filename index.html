@@ -123,27 +123,44 @@
                     </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Job Title</summary>
+                        <input type="search" class="outline-none border-none rounded-xl pl-2 py-1 w-full text-sm bg-main-white-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #jobtitle-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
                         <!-- choices wrapper -->
-                        <form id="jobtitle-filter-form" data-is-selected="false">
-                            <div class="flex items-center space-x-1">
+                        <form id="jobtitle-filter-form" class="max-h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5" data-is-selected="false">
+                            <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
                                 <label for="Doctor" class="select-none touch-none">Doctor</label>
                             </div>
-                            <div class="flex items-center space-x-1">
+                            <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Back-end Developer" id="Back-end Developer"/>
                                 <label for="Back-end Developer" class="select-none touch-none">Back-end Developer</label>
                             </div>
-                            <div class="flex items-center space-x-1">
+                            <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Front-end Developer" id="Front-end Developer"/>
                                 <label for="Front-end Developer" class="select-none touch-none">Front-end Developer</label>
                             </div>
-                            <div class="flex items-center space-x-1">
+                            <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Engineer" id="Engineer"/>
                                 <label for="Engineer" class="select-none touch-none">Engineer</label>
                             </div>
-                            <div class="flex items-center space-x-1">
+                            <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Designer" id="Designer"/>
                                 <label for="Designer" class="select-none touch-none">Designer</label>
+                            </div>
+                            <div class="flex items-baseline space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Dreamer" id="Dreamer"/>
+                                <label for="Dreamer" class="select-none touch-none">Dreamer</label>
+                            </div>
+                            <div class="flex items-baseline space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Cook" id="Cook"/>
+                                <label for="Cook" class="select-none touch-none">Cook</label>
+                            </div>
+                            <div class="flex items-baseline space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Philanthropist" id="Philanthropist"/>
+                                <label for="Philanthropist" class="select-none touch-none">Philanthropist</label>
+                            </div>
+                            <div class="flex items-baseline space-x-1">
+                                <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="porn star" id="porn star"/>
+                                <label for="porn star" class="select-none touch-none">Porn star</label>
                             </div>
                         </form>
                     </details>
@@ -319,7 +336,7 @@
 
     </div>
 
-    <!-- <script src="https://unpkg.com/hyperscript.org@0.9.12"></script> -->
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <script defer src="./src/js/script.js"></script>
 </body>
 </html>
