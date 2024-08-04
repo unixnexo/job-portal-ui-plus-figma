@@ -27,3 +27,23 @@ toggleXsvgToClearAllCheckboxes('salary-filter-form', 'salary-filter-form-clear-s
 toggleXsvgToClearAllCheckboxes('location-filter-form', 'location-filter-form-clear-svg');
 toggleXsvgToClearAllCheckboxes('gender-filter-form', 'gender-filter-form-clear-svg');
 toggleXsvgToClearAllCheckboxes('conditions-filter-form', 'conditions-filter-form-clear-svg');
+
+
+/**
+ * reset all filter search forms
+ */
+const allFilterSearchForms = document.querySelectorAll('#filter-search-nav form');
+const clearAllFilterSearch = document.getElementById('filtering-nav-x-svg');
+
+clearAllFilterSearch.addEventListener('click', () => {
+    allFilterSearchForms.forEach(form => {
+        form.reset();
+        const Xsvg = document.querySelector(`#${form.id}-clear-svg`);
+        !Xsvg.classList.contains('hidden') ? Xsvg.classList.add('hidden') : None;
+    });
+});
+
+
+/////***** test *****/////
+
+
