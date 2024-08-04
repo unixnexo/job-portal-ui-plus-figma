@@ -104,7 +104,7 @@
             <div class="flex justify-between items-center mt-[19px] mb-3" dir="ltr">
                 <p class="text-[18px] font-medium">Filters</p>
                 <!-- x svg -->
-                <div id="filtering-nav-x-svg" class="p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                <div id="filtering-nav-x-svg" class="hidden p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
                     <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
@@ -124,7 +124,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Job Title</summary>
                         <!-- choices wrapper -->
-                        <form id="jobtitle-filter-form">
+                        <form id="jobtitle-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
                                 <label for="Doctor" class="select-none touch-none">Doctor</label>
@@ -160,7 +160,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Experience</summary>
                         <!-- choices wrapper -->
-                        <form id="experience-filter-form">
+                        <form id="experience-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 7 years" id="Up to 7 years"/>
                                 <label for="Up to 7 years" class="select-none touch-none">Up to 7 years</label>
@@ -196,7 +196,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Salary</summary>
                         <!-- choices wrapper -->
-                        <form id="salary-filter-form">
+                        <form id="salary-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 500K per year" id="Up to 500K per year"/>
                                 <label for="Up to 500K per year" class="select-none touch-none">Up to 500K per year</label>
@@ -228,7 +228,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Location</summary>
                         <!-- choices wrapper -->
-                        <form id="location-filter-form">
+                        <form id="location-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Iran" id="Iran"/>
                                 <label for="Iran" class="select-none touch-none">Iran</label>
@@ -264,7 +264,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Gender</summary>
                         <!-- choices wrapper -->
-                        <form id="gender-filter-form">
+                        <form id="gender-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Male" id="Male"/>
                                 <label for="Male" class="select-none touch-none">Male</label>
@@ -296,7 +296,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Conditions</summary>
                         <!-- choices wrapper -->
-                        <form id="conditions-filter-form">
+                        <form id="conditions-filter-form" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Remote Only" id="Remote Only"/>
                                 <label for="Remote Only" class="select-none touch-none">Remote Only</label>
