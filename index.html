@@ -111,14 +111,17 @@
             <div class="space-y-4" dir="ltr">
 
                 <!-- job title filter -->
-                <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                <div class="details-wrapper flex items-center relative">
+                    <!-- x svg -->
+                    <div id="jobtitle-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Job Title</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="jobtitle-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
                                 <label for="Doctor" class="select-none touch-none">Doctor</label>
@@ -145,13 +148,16 @@
 
                 <!-- experience filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                    <!-- x svg -->
+                    <div id="experience-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Experience</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="experience-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 7 years" id="Up to 7 years"/>
                                 <label for="Up to 7 years" class="select-none touch-none">Up to 7 years</label>
@@ -178,13 +184,16 @@
 
                 <!-- salary filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                    <!-- x svg -->
+                    <div id="salary-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Salary</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="salary-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 500K per year" id="Up to 500K per year"/>
                                 <label for="Up to 500K per year" class="select-none touch-none">Up to 500K per year</label>
@@ -207,13 +216,16 @@
 
                 <!-- location filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                    <!-- x svg -->
+                    <div id="location-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Location</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="location-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Iran" id="Iran"/>
                                 <label for="Iran" class="select-none touch-none">Iran</label>
@@ -240,13 +252,16 @@
 
                 <!-- gender filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                    <!-- x svg -->
+                    <div id="gender-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Gender</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="gender-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Male" id="Male"/>
                                 <label for="Male" class="select-none touch-none">Male</label>
@@ -269,13 +284,16 @@
 
                 <!-- conditions filter -->
                 <div class="details-wrapper flex relative">
-                    <svg class="absolute stroke-red-500 right-0 top-1.5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
+                    <!-- x svg -->
+                    <div id="conditions-filter-form-clear-svg" class="hidden absolute right-0 top-0 p-1 rounded-full hover:bg-red-200 active:bg-red-300 cursor-pointer transition-all duration-150 ease-linear">
+                        <svg class="stroke-red-500" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Conditions</summary>
                         <!-- choices wrapper -->
-                        <form>
+                        <form id="conditions-filter-form">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Remote Only" id="Remote Only"/>
                                 <label for="Remote Only" class="select-none touch-none">Remote Only</label>
@@ -298,5 +316,7 @@
 
     </div>
 
+    <!-- <script src="https://unpkg.com/hyperscript.org@0.9.12"></script> -->
+    <script defer src="./src/js/script.js"></script>
 </body>
 </html>
