@@ -16,6 +16,31 @@ clearAllFilterSearch.addEventListener('click', () => {
 
 
 /**
+ * hide clear all svg when no checkbox is selected
+ */
+const forms = document.querySelectorAll('form[data-is-selected]');
+const checkAllForms = () => {
+  const allFalse = Array.from(forms).every(form => form.getAttribute('data-is-selected') === 'false');
+  if (allFalse) {
+    clearAllFilterSearch.classList.add('hidden');
+  }
+};
+
+const callback = (mutationsList) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'data-is-selected') {
+      checkAllForms();
+    }
+  }
+};
+
+const observer = new MutationObserver(callback);
+const config = { attributes: true };
+forms.forEach(form => observer.observe(form, config));
+checkAllForms();
+
+
+/**
  * toggle X svg to clear all checkboxes related to the form
  */
 function toggleXsvgToClearAllCheckboxes(formId, svgId) {
@@ -63,47 +88,6 @@ toggleXsvgToClearAllCheckboxes('conditions-filter-form', 'conditions-filter-form
 
 
 /////***** test *****/////
-// const allFilteringForms = document.querySelectorAll('#filter-search-nav form');
-// allFilteringForms.forEach(form => {
-//     form.addEventListener('input', () => {
-//         console.log('hi momo');
-        
-//         const allFilteringCheckboxes = document.querySelectorAll('#filter-search-nav form input[type="checkbox"]');
-//         let counter = 0;
-//         allFilteringCheckboxes.forEach(checkbox => {
-//             if (checkbox.checked) {
-//                 counter += 1;
-//             }
-//         });
-//         console.log(counter);
-    
-//         if (counter === 0) {
-//             clearAllFilterSearch.classList.add('hidden');
-//         }
-//     });
-// });
 
 
-const forms = document.querySelectorAll('form[data-is-selected]');
-
-const checkAllForms = () => {
-  const allFalse = Array.from(forms).every(form => form.getAttribute('data-is-selected') === 'false');
-  if (allFalse) {
-    console.log('All forms have data-is-selected set to false');
-    clearAllFilterSearch.classList.add('hidden');
-  }
-};
-
-const callback = (mutationsList) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'data-is-selected') {
-      checkAllForms();
-    }
-  }
-};
-
-const observer = new MutationObserver(callback);
-const config = { attributes: true };
-forms.forEach(form => observer.observe(form, config));
-checkAllForms();
 
