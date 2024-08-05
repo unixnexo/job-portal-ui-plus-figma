@@ -100,7 +100,7 @@
         </main>
 
         <!-- filtering nav -->
-        <nav id="filter-search-nav" class="w-[210px] h-screen bg-main-sky-blue px-4 overflow-hidden hover:overflow-y-auto custom-scrollbar pb-5" dir="rtl">
+        <nav id="filter-search-nav" class="w-[210px] h-screen bg-main-sky-blue px-2 overflow-hidden hover:overflow-y-auto custom-scrollbar pb-5" dir="rtl">
             <div class="flex justify-between items-center mt-[19px] mb-3" dir="ltr">
                 <p class="text-[18px] font-medium">Filters</p>
                 <!-- x svg -->
@@ -111,7 +111,7 @@
                 </div>              
             </div>
             <!-- filters -->
-            <div class="space-y-4" dir="ltr">
+            <div class="space-y-4 w-full" dir="ltr">
 
                 <!-- job title filter -->
                 <div class="details-wrapper flex items-center relative">
@@ -125,7 +125,7 @@
                         <summary class="text-[18px] flex items-center">Job Title</summary>
                         <input type="search" class="outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #jobtitle-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
                         <!-- choices wrapper -->
-                        <form id="jobtitle-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5" data-is-selected="false">
+                        <form id="jobtitle-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5 px-1" data-is-selected="false">
                             <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Doctor" id="Doctor"/>
                                 <label for="Doctor" class="select-none touch-none">Doctor</label>
@@ -177,7 +177,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Experience</summary>
                         <!-- choices wrapper -->
-                        <form id="experience-filter-form" data-is-selected="false">
+                        <form id="experience-filter-form" class="px-1" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 7 years" id="Up to 7 years"/>
                                 <label for="Up to 7 years" class="select-none touch-none">Up to 7 years</label>
@@ -213,7 +213,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Salary</summary>
                         <!-- choices wrapper -->
-                        <form id="salary-filter-form" data-is-selected="false">
+                        <form id="salary-filter-form" class="px-1" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Up to 500K per year" id="Up to 500K per year"/>
                                 <label for="Up to 500K per year" class="select-none touch-none">Up to 500K per year</label>
@@ -246,7 +246,7 @@
                         <summary class="text-[18px] flex items-center">Location</summary>
                         <input type="search" class="outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #location-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
                         <!-- choices wrapper -->
-                        <form id="location-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5" data-is-selected="false">
+                        <form id="location-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5 px-1" data-is-selected="false">
                             <div class="flex items-baseline space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Iran" id="Iran"/>
                                 <label for="Iran" class="select-none touch-none">Iran</label>
@@ -298,7 +298,7 @@
                     <details open>
                         <summary class="text-[18px] flex items-center">Gender</summary>
                         <!-- choices wrapper -->
-                        <form id="gender-filter-form" data-is-selected="false">
+                        <form id="gender-filter-form" class="px-1" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Male" id="Male"/>
                                 <label for="Male" class="select-none touch-none">Male</label>
@@ -329,8 +329,8 @@
                     </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Conditions</summary>
-                        <!-- choices wrapper -->
-                        <form id="conditions-filter-form" data-is-selected="false">
+                        <!-- choices wrapper --> 
+                        <form id="conditions-filter-form" class="px-1" data-is-selected="false">
                             <div class="flex items-center space-x-1">
                                 <input type="checkbox" class="accent-slate-950 size-3.5 outline-none border-0" name="Remote Only" id="Remote Only"/>
                                 <label for="Remote Only" class="select-none touch-none">Remote Only</label>
