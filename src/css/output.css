@@ -566,6 +566,10 @@ video {
   right: 0px;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -632,6 +636,11 @@ video {
   height: 0.875rem;
 }
 
+.size-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
@@ -693,20 +702,12 @@ video {
   flex-direction: column;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
 
 .items-baseline {
   align-items: baseline;
-}
-
-.items-stretch {
-  align-items: stretch;
 }
 
 .justify-between {
@@ -731,20 +732,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
 
 .overflow-y-auto {
   overflow-y: auto;
-}
-
-.overflow-x-visible {
-  overflow-x: visible;
 }
 
 .rounded-2xl {
@@ -782,18 +775,21 @@ video {
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.stroke-\[\#a4a3a3\] {
+  stroke: #a4a3a3;
+}
+
 .stroke-red-500 {
   stroke: #ef4444;
+}
+
+.stroke-gray-dark {
+  stroke: #a4a3a3;
 }
 
 .object-cover {
@@ -813,21 +809,6 @@ video {
   padding: 0.75rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.py-px {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -838,9 +819,9 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .pb-5 {
@@ -1149,6 +1130,10 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .active\:bg-red-300:active {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.peer:focus ~ .peer-focus\:hidden {
+  display: none;
 }
 
 .hover\:\[\&\>\*\:not\(\:first-child\)\]\:bg-main-white-ish>*:not(:first-child):hover {

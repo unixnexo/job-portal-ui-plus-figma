@@ -123,7 +123,13 @@
                     </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Job Title</summary>
-                        <input type="search" class="outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #jobtitle-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
+                        <!-- search bar -->
+                        <div class="relative flex items-center">
+                            <input type="search" class="peer outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #jobtitle-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
+                            <svg class="peer-focus:hidden size-4 absolute right-1 stroke-gray-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>                              
+                        </div>
                         <!-- choices wrapper -->
                         <form id="jobtitle-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5 px-1" data-is-selected="false">
                             <div class="flex items-baseline space-x-1">
@@ -244,7 +250,14 @@
                     </div>
                     <details open>
                         <summary class="text-[18px] flex items-center">Location</summary>
-                        <input type="search" class="outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #location-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
+                        <!-- search bar -->
+                        <div class="relative flex items-center">
+                            <input type="search" class="peer outline-none border-none rounded-lg pl-2 py-px w-full text-sm bg-active-gray-ish focus:outline-active-gray-ish my-1" _="on keyup if the event's key is 'Escape' set my value to '' trigger keyup else show <div/> in #location-filter-form when its textContent.toLowerCase() contains my value.toLowerCase() end on input if my value is '' trigger keyup" placeholder="Search the list below" />
+                            <svg class="peer-focus:hidden size-4 absolute right-1 stroke-gray-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>                              
+                        </div>
+                        
                         <!-- choices wrapper -->
                         <form id="location-filter-form" class="h-[120px] overflow-y-auto custom-scrollbar-sm cursor-row-resize [&>div>label]:leading-5 px-1" data-is-selected="false">
                             <div class="flex items-baseline space-x-1">
