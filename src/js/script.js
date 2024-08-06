@@ -18,26 +18,29 @@ clearAllFilterSearch.addEventListener('click', () => {
 /**
  * hide clear all svg when no checkbox is selected
  */
-const forms = document.querySelectorAll('form[data-is-selected]');
-const checkAllForms = () => {
-  const allFalse = Array.from(forms).every(form => form.getAttribute('data-is-selected') === 'false');
-  if (allFalse) {
-    clearAllFilterSearch.classList.add('hidden');
-  }
-};
-
-const callback = (mutationsList) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'data-is-selected') {
-      checkAllForms();
+function clearFilters() {
+  const forms = document.querySelectorAll('form[data-is-selected]');
+  const checkAllForms = () => {
+    const allFalse = Array.from(forms).every(form => form.getAttribute('data-is-selected') === 'false');
+    if (allFalse) {
+      clearAllFilterSearch.classList.add('hidden');
     }
-  }
-};
+  };
 
-const observer = new MutationObserver(callback);
-const config = { attributes: true };
-forms.forEach(form => observer.observe(form, config));
-checkAllForms();
+  const callback = (mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-is-selected') {
+        checkAllForms();
+      }
+    }
+  };
+
+  const observer = new MutationObserver(callback);
+  const config = { attributes: true };
+  forms.forEach(form => observer.observe(form, config));
+  checkAllForms();
+}
+clearFilters();
 
 
 /**
@@ -84,7 +87,7 @@ toggleXsvgToClearAllCheckboxes('conditions-filter-form', 'conditions-filter-form
 
 
 /**
- * appearance, functionality of closable/openable side menus
+ * appearance, functionality of closable side menus
  */
 function iconSwitcherForMenus(openSvg, closeSvg, wrapper) {
   const barsSvg = document.getElementById(openSvg);
@@ -131,6 +134,9 @@ iconSwitcherForMenus('filters-menu-filter-svg', 'filters-menu-x-svg', 'filters-m
 
 
 /////***** test *****/////
+
+
+
 
 
 
