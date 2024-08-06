@@ -125,6 +125,7 @@ function iconSwitcherForMenus(openSvg, closeSvg, wrapper) {
   });
 };
 iconSwitcherForMenus('bars-menu-bars-svg', 'bars-menu-x-svg', 'bars-menu-svg-wrapper');
+iconSwitcherForMenus('filters-menu-filter-svg', 'filters-menu-x-svg', 'filters-menu-svg-wrapper');
 
 
 
