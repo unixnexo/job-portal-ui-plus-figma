@@ -83,6 +83,48 @@ toggleXsvgToClearAllCheckboxes('gender-filter-form', 'gender-filter-form-clear-s
 toggleXsvgToClearAllCheckboxes('conditions-filter-form', 'conditions-filter-form-clear-svg');
 
 
+/**
+ * appearance, functionality of closable/openable side menus
+ */
+function iconSwitcherForMenus(openSvg, closeSvg, wrapper) {
+  const barsSvg = document.getElementById(openSvg);
+  const xSvg = document.getElementById(closeSvg);
+  const svgWrapper = document.getElementById(wrapper);
+
+  svgWrapper.addEventListener('click', () => {
+    if (svgWrapper.getAttribute('data-is-open') === 'false') {
+      // changing icons
+      barsSvg.classList.add('hidden');
+      xSvg.classList.remove('hidden');
+      // changing appearance
+      document.body.classList.remove('no-overlay');
+      svgWrapper.classList.remove('hover:bg-gray-dark/20');
+      svgWrapper.classList.add('hover:bg-main-white-ish/60');
+      svgWrapper.classList.add('bg-main-white-ish');
+      svgWrapper.classList.remove('absolute');
+      svgWrapper.classList.add('fixed');
+
+      // changing state
+      svgWrapper.setAttribute('data-is-open', 'true');
+
+    } else if (svgWrapper.getAttribute('data-is-open') === 'true') {
+      // changing icons
+      barsSvg.classList.remove('hidden');
+      xSvg.classList.add('hidden');
+      // changing appearance  
+      document.body.classList.add('no-overlay');
+      svgWrapper.classList.remove('hover:bg-main-white-ish/60');
+      svgWrapper.classList.add('hover:bg-gray-dark/20');
+      svgWrapper.classList.remove('bg-main-white-ish');
+      svgWrapper.classList.add('absolute');
+      svgWrapper.classList.remove('fixed');
+
+      // changing state
+      svgWrapper.setAttribute('data-is-open', 'false');
+    }
+  });
+};
+iconSwitcherForMenus('bars-menu-bars-svg', 'bars-menu-x-svg', 'bars-menu-svg-wrapper');
 
 
 

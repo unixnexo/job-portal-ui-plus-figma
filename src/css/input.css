@@ -7,6 +7,20 @@
     border-radius: 20px;
 }
 
+body::after {
+  content: '';
+  background-color: rgba(32, 31, 31, 0.415);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.no-overlay::after {
+  content: none;
+}
+
 body, html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -124,3 +138,4 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 /*** test ***/
+

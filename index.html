@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="./src/css/output.css">
     <title>WorkBy</title>
 </head>
-<body class="bg-main-white-ish text-black">
+<body class="bg-main-white-ish text-black no-overlay">
 
     <div class="flex relative">
 
         <!-- bars menu icon -->
-        <div class="absolute top-2 left-2 rounded-full p-1 z-20 hover:bg-gray-dark/20 active:bg-gray-dark/50 cursor-pointer select-none touch-none transition-all ease-in-out duration-200" _="on click toggle .-translate-x-52 on #navigation-nav then toggle .translate-x-52 on me">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <div id="bars-menu-svg-wrapper" data-is-open="false"  class="absolute top-2 left-2 rounded-full p-1 z-20 hover:bg-gray-dark/20 active:bg-gray-dark/50 cursor-pointer select-none touch-none transition-all ease-in-out duration-200 *:pointer-events-none" _="on click toggle .-translate-x-52 on #navigation-nav then toggle .translate-x-52 on me">
+            <svg id="bars-menu-bars-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>              
+            </svg>
+            <!-- X -->
+            <svg id="bars-menu-x-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>                        
         </div>
 
         <!-- navigation nav -->
