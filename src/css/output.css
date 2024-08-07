@@ -1434,6 +1434,15 @@ input[type="search"]:focus::-webkit-search-cancel-button {
   background-color: rgb(164 163 163 / 0.9);
 }
 
+.active\:bg-sky-blue-darker:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(89 160 214 / var(--tw-bg-opacity));
+}
+
+.active\:bg-sky-blue-darker\/70:active {
+  background-color: rgb(89 160 214 / 0.7);
+}
+
 .peer:focus ~ .peer-focus\:hidden {
   display: none;
 }
