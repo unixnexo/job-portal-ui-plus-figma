@@ -131,6 +131,25 @@ iconSwitcherForMenus('bars-menu-bars-svg', 'bars-menu-x-svg', 'bars-menu-svg-wra
 iconSwitcherForMenus('filters-menu-filter-svg', 'filters-menu-x-svg', 'filters-menu-svg-wrapper');
 
 
+/**
+ * search dialog - < md screens
+ */
+function searchDialog() {
+  const dialog = document.getElementById('search-dialog');
+  const showButton = document.getElementById('show-search-overlay');
+  const closeButton = document.getElementById('close-search-overlay');
+
+  showButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+}
+searchDialog();
+
+
 
 
 /////***** test *****/////

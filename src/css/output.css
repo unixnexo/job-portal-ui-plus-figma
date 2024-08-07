@@ -736,6 +736,22 @@ video {
   height: 100vh;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[40vh\] {
+  height: 40vh;
+}
+
+.h-\[10vh\] {
+  height: 10vh;
+}
+
+.h-\[20vh\] {
+  height: 20vh;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -760,6 +776,18 @@ video {
 .w-min {
   width: -moz-min-content;
   width: min-content;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[80vw\] {
+  width: 80vw;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
 }
 
 .shrink-0 {
@@ -949,6 +977,14 @@ video {
   padding: 0.75rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-px {
+  padding: 1px;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1027,6 +1063,15 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .font-bold {
@@ -1336,6 +1381,15 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     --tw-bg-opacity: 1;
     background-color: rgb(89 160 214 / var(--tw-bg-opacity));
   }
+
+  .hover\:bg-main-white-ish:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 247 247 / var(--tw-bg-opacity));
+  }
+
+  .hover\:bg-main-white-ish\/70:hover {
+    background-color: rgb(247 247 247 / 0.7);
+  }
 }
 
 .focus\:outline-active-gray-ish:focus {
@@ -1354,6 +1408,31 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .active\:bg-red-300:active {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.active\:bg-gray-dark:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 163 163 / var(--tw-bg-opacity));
+}
+
+.active\:bg-gray-dark\/20:active {
+  background-color: rgb(164 163 163 / 0.2);
+}
+
+.active\:bg-gray-dark\/0:active {
+  background-color: rgb(164 163 163 / 0);
+}
+
+.active\:bg-gray-dark\/70:active {
+  background-color: rgb(164 163 163 / 0.7);
+}
+
+.active\:bg-gray-dark\/40:active {
+  background-color: rgb(164 163 163 / 0.4);
+}
+
+.active\:bg-main-white-ish\/40:active {
+  background-color: rgb(247 247 247 / 0.4);
 }
 
 .peer:focus ~ .peer-focus\:hidden {
