@@ -101,9 +101,8 @@ function iconSwitcherForMenus(openSvg, closeSvg, wrapper) {
       xSvg.classList.remove('hidden');
       // changing appearance
       document.body.classList.remove('no-overlay');
-      svgWrapper.classList.remove('hover:bg-gray-dark/20');
+      svgWrapper.classList.remove('hover:bg-gray-dark/70');
       svgWrapper.classList.add('hover:bg-main-white-ish/60');
-      svgWrapper.classList.add('bg-main-white-ish');
 
       // changing state
       svgWrapper.setAttribute('data-is-open', 'true');
@@ -115,8 +114,7 @@ function iconSwitcherForMenus(openSvg, closeSvg, wrapper) {
       // changing appearance  
       document.body.classList.add('no-overlay');
       svgWrapper.classList.remove('hover:bg-main-white-ish/60');
-      svgWrapper.classList.add('hover:bg-gray-dark/20');
-      svgWrapper.classList.remove('bg-main-white-ish');
+      svgWrapper.classList.add('hover:bg-gray-dark/70');
 
       // changing state
       svgWrapper.setAttribute('data-is-open', 'false');

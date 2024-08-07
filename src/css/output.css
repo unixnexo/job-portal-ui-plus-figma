@@ -1386,6 +1386,18 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     --tw-bg-opacity: 1;
     background-color: rgb(89 160 214 / var(--tw-bg-opacity));
   }
+
+  .hover\:bg-gray-dark\/70:hover {
+    background-color: rgb(164 163 163 / 0.7);
+  }
+
+  .hover\:bg-main-white-ish\/90:hover {
+    background-color: rgb(247 247 247 / 0.9);
+  }
+
+  .hover\:bg-main-white-ish\/0:hover {
+    background-color: rgb(247 247 247 / 0);
+  }
 }
 
 .focus\:outline-active-gray-ish:focus {
@@ -1408,6 +1420,10 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .active\:bg-red-300:active {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.active\:bg-gray-dark\/90:active {
+  background-color: rgb(164 163 163 / 0.9);
 }
 
 .peer:focus ~ .peer-focus\:hidden {
