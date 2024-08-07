@@ -10,17 +10,6 @@
 
     <div class="flex relative">
 
-        <!-- bars menu icon - < xl screens -->
-        <div id="bars-menu-svg-wrapper" data-is-open="false" class="fixed bg-main-sky-blue drop-shadow-xl top-2 left-2 rounded-full p-1 hover:bg-gray-dark/70 active:bg-gray-dark/90 cursor-pointer select-none touch-none transition-all ease-in-out duration-200 *:pointer-events-none" _="on click toggle .-translate-x-60 on #navigation-nav then toggle .translate-x-52 on me then toggle .z-50 on me">
-            <svg id="bars-menu-bars-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <!-- X -->
-            <svg id="bars-menu-x-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6 hidden">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>                        
-        </div>
-
         <!-- navigation nav -->
         <nav id="navigation-nav" class="w-[210px] shrink-0 -translate-x-60 xl:translate-x-0 top-0 fixed z-50 flex xl:sticky flex-col bg-white h-screen md:overflow-hidden md:hover:overflow-y-auto overflow-y-auto shadow-lg custom-scrollbar transition-transform ease-in-out duration-200">
             <!-- logo -->
@@ -432,6 +421,17 @@
 
             </div>
         </main>
+
+        <!-- bars menu icon - < xl screens -->
+        <div id="bars-menu-svg-wrapper" data-is-open="false" class="fixed bg-main-sky-blue drop-shadow-xl top-2 left-2 rounded-full p-1 hover:bg-gray-dark/70 active:bg-gray-dark/90 cursor-pointer select-none touch-none transition-all ease-in-out duration-200 *:pointer-events-none" _="on click toggle .-translate-x-60 on #navigation-nav then toggle .translate-x-52 on me then toggle .z-50 on me">
+            <svg id="bars-menu-bars-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!-- X -->
+            <svg id="bars-menu-x-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>                        
+        </div>
 
         <!-- search icon & overlay - < md screens -->
         <div id="show-search-overlay" class="md:hidden fixed bg-main-sky-blue drop-shadow-xl right-[42px] top-2 rounded-full p-1 hover:bg-gray-dark/70 active:bg-gray-dark/90 cursor-pointer select-none touch-none transition-all ease-in-out duration-200 *:pointer-events-none">
